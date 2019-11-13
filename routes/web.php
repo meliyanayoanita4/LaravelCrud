@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-
-    Route::get('/pegawai/tambah','SaveController@addData');
-    Route::post('/pegawai/store','PegawaiController@store');
-});
+Route::get('/', 'DataControler@index');
+Route::get('/AddData','DataControler@addData')->name('TambahDataPengguna');
+Route::get('/GetData','DataControler@GetData')->name('GetData');
+Route::get('/EditData','DataControler@EditData');
+Route::get('/UpdateData','DataControler@updateData')->name('UpdateDataPengguna');
+Route::get('/Hapus','DataControler@DeleteData');
+Route::get('/SearchData','DataControler@SearchData')->name('SearchData');
