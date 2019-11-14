@@ -16,15 +16,15 @@
             <th></th></tr>
         <tr>
             <td><label>Name</label></td>
-            <td><input type="text" name="name" id="name" placeholder="Input Your Name"></td>
+            <td><input type="text" name="name" id="name" placeholder="Input Your Name" required></td>
         </tr>
         <tr>
             <td><label>Email</label></td>
-            <td><input type="text" name="email" id="email" placeholder="Input Your Email"></td>
+            <td><input type="text" name="email" id="email" placeholder="Input Your Email" required></td>
         </tr>
         <tr>
             <td><label>Password</label></td>
-            <td><input type="password" name="pass" id="pass" placeholder="Input Your Password"></td>
+            <td><input type="password" name="pass" id="pass" placeholder="Input Your Password" required></td>
         </tr>
     </table>
     <br>
@@ -51,6 +51,25 @@
         <button type="submit" class="btn bg-orange btn-block btn-sm waves-effect">Search Data</button>
         </td>
     </tr>
+
+    </table>
+</form>
+
+<form method="GET" action="{{route('SearchDataYoutube')}}">
+    {{ csrf_field() }}
+    <table cellpadding="2">
+        <tr><th></th></tr>
+        <tr>
+            <td><label>Search Word In Youtube (Use API)</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="searchKeyYoutube" id="searchKeyYoutube" placeholder="Input Your Keyword"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" class="btn bg-orange btn-block btn-sm waves-effect">Search</button>
+            </td>
+        </tr>
 
     </table>
 </form>

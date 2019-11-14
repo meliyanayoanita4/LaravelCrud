@@ -64,8 +64,7 @@
         </style>
     </head>
     <body>
-    <form action="/pegawai/store" method="post">
-        <div class="flex-center position-ref full-height">
+       <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -81,6 +80,8 @@
             @endif
 
             <div class="content">
+                <form action="/data/users" method="post">
+                    {{ csrf_field() }}
                 <div class="title m-b-md">
                     <div class="form-group form-float">
                         <div class="form-line">

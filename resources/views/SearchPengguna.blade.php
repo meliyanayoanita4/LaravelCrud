@@ -17,19 +17,19 @@
     </tr>
 
         <tr>
-            <td align="center">{{ $DataSearch->name }}</td>
-            <td align="center">{{ $DataSearch->email }}</td>
-            <td align="center">{{ $DataSearch->password }}</td>
+            <td align="center">{{ $SearchData->name }}</td>
+            <td align="center">{{ $SearchData->email }}</td>
+            <td align="center">{{ $SearchData->password }}</td>
             <td align="center">
                 <form method="GET" action="{{ url('/EditData') }}">
                     {{ csrf_field() }}
-                    <input type="hidden" name="id_edit" id="id_edit" value="{{ $DataSearch->id }}">
+                    <input type="hidden" name="id_edit" id="id_edit" value="{{ $SearchData->id }}">
                     <button type="submit" class="btn bg-orange btn-block btn-sm waves-effect">EDIT</button>
                 </form>
                 <br>
                 <form method="GET" action="{{ url('/Hapus') }}">
                     {{ csrf_field() }}
-                    <input type="hidden" name="id_hapus" id="id_hapus" value="{{ $DataSearch->id }}">
+                    <input type="hidden" name="id_hapus" id="id_hapus" value="{{ $SearchData->id }}">
                     <button type="submit" class="btn bg-orange btn-block btn-sm waves-effect">HAPUS</button>
                 </form>
                 <br>

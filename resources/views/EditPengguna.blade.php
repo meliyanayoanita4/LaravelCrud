@@ -16,18 +16,18 @@
             <th></th></tr>
         <tr>
             <td><label>Name</label></td>
-            <td><input type="text" name="name" id="name" value="{{$DataEdit->name}}"></td>
+            <td><input type="text" name="name" id="name" value="{{$EditData->name}}"></td>
         </tr>
         <tr>
             <td><label>Email</label></td>
-            <td><input type="text" name="email" id="email" value="{{$DataEdit->email}}"></td>
+            <td><input type="text" name="email" id="email" value="{{$EditData->email}}"></td>
         </tr>
         <tr>
             <td><label>Password</label></td>
-            <td><input type="password" name="pass" id="pass" value="{{$DataEdit->password}}"></td>
+            <td><input type="password" name="pass" id="pass" value="{{$EditData->password}}"></td>
         </tr>
     </table>
-    <input type="hidden" name="id_edit" id="id_edit" value="{{ $DataEdit->id }}">
+    <input type="hidden" name="id_edit" id="id_edit" value="{{ $EditData->id }}">
     <button type="submit" class="btn bg-orange btn-block btn-sm waves-effect">Edit  Data</button>
 </form>
 <form method="GET" action="{{route('GetData')}}">
